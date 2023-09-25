@@ -1,0 +1,12 @@
+<body ng-app ="counterApp">
+  <h3>Simple Counter with Controller</h3>
+  
+  <div ng-controller="counterCtrl as ctrl">
+    <button ng-click="ctrl.increment()" ng-disabled="ctrl.isLimitExceeded()">Increment</button>
+    <button ng-click="ctrl.decrement()" ng-disabled="countIsZero()">Deccrement</button>
+    <button ng-click="ctrl.reset()">Reset</button>
+    <hr>
+    <p ng-show="ctrl.isLimitExceeded()" class="red">You have exceeded your limit!</p>
+    <p ng-hide="ctrl.isLimitExceeded()">You are doing great!</p>
+  </div>
+</body>
